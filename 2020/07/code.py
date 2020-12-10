@@ -9,5 +9,10 @@ def main():
     groups = readFile()
     print(groups)
 
+def part1():
+
+def part2():
+
+
 if __name__ == "__main__":
     main()
