@@ -16,13 +16,13 @@ def part1(groups):
 def part2(groups):
     result = 0
     for group in groups:
-        answers = {chr(c):0 for c in range(97, 123)}
+        letters = dict([(chr(i),0) for i in range(97,123)])
 
         for answer in group:
             for letter in answer:
-                answers[letter] += 1
+                letters[letter] += 1
 
-        result += sum([1 for letter in answers if answers[letter] == len(group)])
+        result += sum([1 for letter in letters if letters[letter] == len(group)])
     return result
 
 def main():
