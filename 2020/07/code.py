@@ -42,7 +42,7 @@ def part1(input):
     seen = set()
     colors = ['shiny gold']
 
-    while colors:
+    while any(colors):
         color = colors.pop()
         seen.add(color)
         colors.extend(input[color])
@@ -53,7 +53,7 @@ def part2(input):
     sum = 0
     color_tuples = [(1, 'shiny gold')]
 
-    while color_tuples:
+    while any(color_tuples):
         amount ,color = color_tuples.pop()
         sum += amount
         color_tuples.extend(((amount * child_number), child) for child_number, child in input[color])
